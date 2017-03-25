@@ -1,5 +1,7 @@
 # fruit-shop
 
+Run all tests with 'sbt test'
+
 Shopping cart
 
 ● You are building a checkout system for a shop which only sells apples and oranges.
