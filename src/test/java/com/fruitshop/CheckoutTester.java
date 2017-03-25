@@ -14,7 +14,12 @@ public interface CheckoutTester
 {
     default void checkAmount(CurrencyAmount expectedTotal, String... items)
     {
-        CurrencyAmount total = new Checkout().tallyItems(items);
+        CurrencyAmount total = checkoutImpl().tallyItems(items);
         assertThat("Checkout total did not match", total, equalTo(expectedTotal));
     }
+
+    /**
+     * @return the checkout object to use fot this test.
+     */
+    Checkout checkoutImpl();
 }

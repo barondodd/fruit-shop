@@ -85,4 +85,9 @@ public class NegativeTests  implements CheckoutTester
             // expected
         }
     }
+
+    @Override
+    public Checkout checkoutImpl() {
+        return new Checkout();
+    }
 }

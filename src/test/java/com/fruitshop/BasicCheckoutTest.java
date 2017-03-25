@@ -33,4 +33,10 @@ public class BasicCheckoutTest implements CheckoutTester
     {
         checkAmount(new CurrencyAmount("£", 2.05), "Apple", "Apple", "Orange", "Apple");
     }
+
+    @Override
+    public Checkout checkoutImpl()
+    {
+        return new Checkout();
+    }
 }
